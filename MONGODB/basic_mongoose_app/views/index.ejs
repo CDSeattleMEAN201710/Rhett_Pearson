@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mongoose Intro</title>
+  </head>
+  <body>
+    <% for (var i in names){ %>
+      <h5>Name:  <%= names[i].name %></h5>
+      <p>Age: <%= names[i].age %></p>
+    <% } %>
+    <form class="" action="/users" method="post">
+      <input type="text" name="name" placeholder="name">
+      <input type="text" name="age" placeholder="age">
+      <input type="submit" name="" value="Submit">
+    </form>
+  </body>
+</html>

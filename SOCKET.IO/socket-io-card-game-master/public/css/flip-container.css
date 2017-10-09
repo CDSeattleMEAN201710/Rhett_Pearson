@@ -1,0 +1,62 @@
+.flip-container, .flip-container-opponent {
+    display: inline-block;
+    perspective: 1000;
+    margin: 10px;
+}
+
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+    width: 165px;
+    height: 249px;
+    text-align: center;
+    line-height: 300px;
+    font-size: 20px;
+    border-radius: 16px;
+    background-size: 100% 100%;
+}
+
+.flip-container-opponent, .front-opponent, .back-opponent {
+    display: inline-block;
+    width: 77px;
+    height: 98px;
+    margin: 0;
+    color: #000;
+    text-align: center;
+    line-height: 100px;
+    font-size: 20px;
+    border-radius: 10px;
+    background-size: 100% 100%;
+}
+
+.flipper {
+    transition: .6s;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: .6s;
+
+    position: relative;
+}
+
+.front, .back, .front-opponent, .back-opponent  {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.front, .front-opponent {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    background: silver;
+}
+
+.back, .back-opponent {
+    background: sandybrown url('../img/card/back.png') no-repeat top left;
+    z-index: 2;
+}
