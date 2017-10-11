@@ -1,0 +1,9 @@
+<p>Hello, {{ name }}</p>
+
+<ul>
+  <li *ngFor="let car of cars">{{ car.year }} {{ car.model }} {{ car.make }}
+    <ul>
+      <li *ngFor="let number of car.numbers">{{number}}</li>
+    </ul>
+  </li>
+</ul>

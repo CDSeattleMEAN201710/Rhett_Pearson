@@ -25,9 +25,9 @@
 				<div>
 					<h3>Name: <%= messages[x].name %></h3>
 					<h3>Message: <%= messages[x].message %></h3>
-					<% for (y in messages[x]._comments) { %>
-						<h5><%="Name: " + messages[x]._comments[y].name %></h5>
-						<h5><%="Comment: " + messages[x]._comments[y].text %></h5>
+					<% for (let y of messages[x]._comments) { %>
+						<h5><%="Name: " + y.name %></h5>
+						<h5><%="Comment: " + y.text %></h5>
 					<% } %>
 
 					<form action=<%="/comment/" + messages[x]._id %> method="post">
